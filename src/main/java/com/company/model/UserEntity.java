@@ -30,6 +30,8 @@ public class UserEntity implements UserDetails {
     @Enumerated(EnumType.STRING)
     private RoleEnum role;
 
+    private String username;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
