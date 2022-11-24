@@ -32,6 +32,8 @@ public class UserEntity implements UserDetails {
 
     private String username;
 
+    private String sequence;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
