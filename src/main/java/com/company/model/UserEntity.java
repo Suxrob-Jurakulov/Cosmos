@@ -1,18 +1,18 @@
-package com.company.model.entity;
+package com.company.model;
 
 import com.company.enums.RoleEnum;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
-
+@Getter
+@Setter
 @Entity
 @Table(name = "users")
-public class UserEntity implements UserDetails {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class UserEntity extends BaseEntity implements UserDetails{
 
     @Column(name = "first_name")
     private String firstName;
@@ -29,7 +29,6 @@ public class UserEntity implements UserDetails {
     @Column
     @Enumerated(EnumType.STRING)
     private RoleEnum role;
-
 
 
     @Override

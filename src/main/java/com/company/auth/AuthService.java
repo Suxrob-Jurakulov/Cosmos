@@ -1,6 +1,6 @@
 package com.company.auth;
 
-import com.company.model.entity.UserEntity;
+import com.company.model.UserEntity;
 import com.company.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
